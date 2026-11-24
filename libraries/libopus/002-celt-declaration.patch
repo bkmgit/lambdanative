@@ -1,0 +1,20 @@
+--- celt/celt_decoder.c	2026-11-24 21:27:27.412259979 +0300
++++ celt/celt_decoder-mod.c	2026-11-24 21:25:54.320346259 +0300
+@@ -188,7 +188,7 @@
+    return opus_custom_decoder_get_size(mode, channels);
+ }
+ 
+-OPUS_CUSTOM_NOSTATIC int opus_custom_decoder_get_size(const CELTMode *mode, int channels)
++OPUS_CUSTOM_EXPORT_STATIC int opus_custom_decoder_get_size(const CELTMode *mode, int channels)
+ {
+    int size;
+ #ifdef ENABLE_QEXT
+@@ -239,7 +239,7 @@
+       return OPUS_OK;
+ }
+ 
+-OPUS_CUSTOM_NOSTATIC int opus_custom_decoder_init(CELTDecoder *st, const CELTMode *mode, int channels)
++OPUS_CUSTOM_EXPORT_STATIC int opus_custom_decoder_init(CELTDecoder *st, const CELTMode *mode, int channels)
+ {
+    if (channels < 0 || channels > 2)
+       return OPUS_BAD_ARG;
