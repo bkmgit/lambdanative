@@ -1,14 +1,14 @@
 --- celt/celt.h	2026-11-24 21:27:19.310127037 +0300
-+++ celt/celt-mod.h	2026-11-24 21:24:27.710584786 +0300
-@@ -186,9 +186,9 @@
++++ celt/celt-mod.h	2026-11-25 08:51:06.768115044 +0300
+@@ -185,11 +185,6 @@
+ #define celt_decoder_ctl opus_custom_decoder_ctl
  
  
- #if defined(CUSTOM_MODES) || defined(ENABLE_OPUS_CUSTOM_API)
+-#if defined(CUSTOM_MODES) || defined(ENABLE_OPUS_CUSTOM_API)
 -#define OPUS_CUSTOM_NOSTATIC
-+#define OPUS_CUSTOM_EXPORT_STATIC
- #else
+-#else
 -#define OPUS_CUSTOM_NOSTATIC static OPUS_INLINE
-+#define OPUS_CUSTOM_EXPORT_STATIC static OPUS_INLINE
- #endif
+-#endif
  
  static const unsigned char trim_icdf[11] = {126, 124, 119, 109, 87, 41, 19, 9, 4, 2, 0};
+ /* Probs: NONE: 21.875%, LIGHT: 6.25%, NORMAL: 65.625%, AGGRESSIVE: 6.25% */
