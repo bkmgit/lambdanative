@@ -1,4 +1,17 @@
 unchanged:
+--- celt/celt_encoder.c	2026-11-24 21:12:57.742990204 +0300
++++ celt/celt_encoder-mod.c	2026-11-25 11:52:24.755846213 +0300
+@@ -151,7 +151,7 @@
+    return opus_custom_encoder_get_size(mode, channels);
+ }
+ 
+-OPUS_CUSTOM_NOSTATIC int opus_custom_encoder_get_size(const CELTMode *mode, int channels)
++OPUS_CUSTOM_EXPORT_STATIC int opus_custom_encoder_get_size(const CELTMode *mode, int channels)
+ {
+    int extra=0;
+    int size;
+only in patch2:
+unchanged:
 --- celt/celt.h	2026-11-24 21:27:19.310127037 +0300
 +++ celt/celt-mod.h	2026-11-25 08:51:06.768115044 +0300
 @@ -185,11 +185,6 @@
