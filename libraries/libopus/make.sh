@@ -3,6 +3,7 @@ PKGHASH=74612396b53f0c0240d2f81d4c7b0eaa14620402
 
 package_download $PKGURL $PKGHASH
 
+# patches for https://gitlab.xiph.org/xiph/opus/-/work_items/2406
 package_patch
 autoconf
 
