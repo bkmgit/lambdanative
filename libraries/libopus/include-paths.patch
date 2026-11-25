@@ -1,0 +1,15 @@
+--- silk/x86/NSQ_sse4_1.c	2026-11-25 15:19:07.785386604 +0300
++++ silk/x86/NSQ_sse4_1-mod.c	2026-11-25 15:18:47.347955071 +0300
+@@ -32,9 +32,9 @@
+ #include <xmmintrin.h>
+ #include <emmintrin.h>
+ #include <smmintrin.h>
+-#include "main.h"
+-#include "celt/x86/x86cpu.h"
+-#include "stack_alloc.h"
++#include "../main.h"
++#include "../../celt/x86/x86cpu.h"
++#include "../../celt/stack_alloc.h"
+ 
+ static OPUS_INLINE void silk_nsq_scale_states_sse4_1(
+     const silk_encoder_state *psEncC,              /* I    Encoder State                   */
