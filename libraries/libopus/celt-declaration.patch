@@ -1,3 +1,20 @@
+unchanged:
+--- celt/celt.h	2026-11-24 21:27:19.310127037 +0300
++++ celt/celt-mod.h	2026-11-25 08:51:06.768115044 +0300
+@@ -185,11 +185,6 @@
+ #define celt_decoder_ctl opus_custom_decoder_ctl
+ 
+ 
+-#if defined(CUSTOM_MODES) || defined(ENABLE_OPUS_CUSTOM_API)
+-#define OPUS_CUSTOM_NOSTATIC
+-#else
+-#define OPUS_CUSTOM_NOSTATIC static OPUS_INLINE
+-#endif
+ 
+ static const unsigned char trim_icdf[11] = {126, 124, 119, 109, 87, 41, 19, 9, 4, 2, 0};
+ /* Probs: NONE: 21.875%, LIGHT: 6.25%, NORMAL: 65.625%, AGGRESSIVE: 6.25% */
+only in patch2:
+unchanged:
 --- celt/celt_decoder.c	2026-11-24 21:27:27.412259979 +0300
 +++ celt/celt_decoder-mod.c	2026-11-24 21:25:54.320346259 +0300
 @@ -188,7 +188,7 @@
